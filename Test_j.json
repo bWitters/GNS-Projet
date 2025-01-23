@@ -1,0 +1,56 @@
+{
+    "AS" :
+        {
+            "1" : 
+            {
+                "Protocol" : "OSPF",
+                "special ip address" : {
+                    "R2" : {"GigabitEthernet1/0" : "200:100:100:100::1/64"}
+                },
+                "Loopback IP range" : "1000:100:100:100::/64",
+                "Router IP range" : "100:100:100:100::/64",
+                "Router":
+                {
+                    "R1": {
+                        "Loopback0" : {"area" : 0},
+                        "GigabitEthernet1/0" : {"connect" : {"R2" : 4}, "area" : 0}
+                    },
+                    "R2":{
+                        "Loopback0" : {"area" : 0},
+                        "GigabitEthernet1/0" : {"connect" : {"R1" : 1}, "area" : 0},
+                        "GigabitEthernet2/0" : {"connect" : {"R3" : 1}, "area" : 0},
+                        "GigabitEthernet3/0" : {"connect" : {"R4" : 1}, "area" : 0}
+                    },
+                    "R3":{
+                        "Loopback0" : {"area" : 0},
+                        "GigabitEthernet1/0" : {"connect" : {"R2" : 1}, "area" : 0}
+                    }
+                }
+            },
+            "2" :
+            {
+                "Protocol" : "RIP",
+                "special ip address" : 0,
+                "Loopback IP range" : "2000:100:100:100::/64",
+                "Router IP range" : "200:100:100:100::/64",
+                "Router":
+                {
+                    "R4": {
+                        "Loopback0" : {"area" : 0},
+                        "GigabitEthernet1/0" : {"connect" : {"R2" : 1}, "area" : 0},
+                        "GigabitEthernet2/0" : {"connect" : {"R5" : 1}, "area" : 0}
+                    },
+                    "R5":{
+                        "Loopback0" : {"area" : 0},
+                        "GigabitEthernet1/0" : {"connect" : {"R4" : 1}, "area" : 0},
+                        "GigabitEthernet2/0" : {"connect" : {"R6" : 1}, "area" : 0}
+                    },
+                    "R6":{
+                        "Loopback0" : {"area" : 0},
+                        "GigabitEthernet3/0" : {"connect" : {"R5" : 1}, "area" : 0}
+                    }
+                }
+            }
+        },
+    "BGP" : 1
+}
