@@ -14,12 +14,13 @@
                     "R1": {
                         "Loopback0" : {"area" : 0},
                         "GigabitEthernet1/0" : {"connect" : {"R2" : 4}, "area" : 0}
+
                     },
                     "R2":{
                         "Loopback0" : {"area" : 0},
                         "GigabitEthernet1/0" : {"connect" : {"R1" : 1}, "area" : 0},
                         "GigabitEthernet2/0" : {"connect" : {"R3" : 1}, "area" : 0},
-                        "GigabitEthernet3/0" : {"connect" : {"R4" : 1}, "area" : 0}
+                        "GigabitEthernet3/0" : {"connect" : {"R4" : 1}, "area" : 0, "eBGP" : 1}
                     },
                     "R3":{
                         "Loopback0" : {"area" : 0},
@@ -37,7 +38,7 @@
                 {
                     "R4": {
                         "Loopback0" : {"area" : 0},
-                        "GigabitEthernet1/0" : {"connect" : {"R2" : 1}, "area" : 0},
+                        "GigabitEthernet1/0" : {"connect" : {"R2" : 1}, "area" : 0, "eBGP" : 1},
                         "GigabitEthernet2/0" : {"connect" : {"R5" : 1}, "area" : 0}
                     },
                     "R5":{
