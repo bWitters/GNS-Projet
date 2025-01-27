@@ -9,10 +9,20 @@ chemin_default = "default.cfg"
 chemin_default_after_boot = "default_after_boot.cfg"
 
 address_used = {}
-with open('Test_j.json', 'r') as file_json:
-    data = json.load(file_json)
 
-    for as_n,as_val in data["AS"].items():
+
+with open('Test_j.json', 'r') as file_json:
+    data_json = json.load(file_json)
+    address_pool = {"Loopback" : {}, "Address" : {}}
+    for as_n,as_val in data_json["AS"].items():
+        i = 1
+        address_pool["Loopback"][as_n] = {} 
+        for router in as_val["Router"].items():
+            address_pool["Loopback"][as_n][router[0]] = as_val["Loopback IP range"].split("/")[0]+str(i)
+            i += 1
+
+    for as_n,as_val in data_json["AS"].items():
+        
         address_used[as_n] = {"Loopback" : [], "Address" : [], "OSPF_ID" : [], "BGP_ID" : []}
         for router in as_val["Router"].items():
             with open("router_file_"+router[0]+".cfg", 'w') as router_file:
@@ -30,32 +40,49 @@ with open('Test_j.json', 'r') as file_json:
             interfaces = as_val["Router"][router[0]].keys()
             inter_num = 0
             first_time = True
-            data[69] = "!\nrouter bgp" + as_n + "\n!\n"
+            data[69] = "!\nrouter bgp " + as_n + "\n"
             i = 1
             bgp_id_to_use = "1.1.1.1"
             while bgp_id_to_use in address_used[as_n]["BGP_ID"]:
                 i+=1 
-                bgp_id = str(i)+"."+str(i)+"."+str(i)+"."+str(i)
+                bgp_id_to_use = str(i)+"."+str(i)+"."+str(i)+"."+str(i)
             address_used[as_n]["BGP_ID"].append(bgp_id_to_use)
-            bgp_id = "bgp router-id "+bgp_id_to_use+"\n"+"bgp log-neighbor-changes\n no bgp default ipv4-unicast"
+            bgp_id = " bgp router-id "+bgp_id_to_use+"\n"+" bgp log-neighbor-changes\n no bgp default ipv4-unicast\n"
+            data[69] += bgp_id
+            neighbors_data = ""
+            loopback_name = ""
+            ## Determination de l'adresse de loopback
+            i = 1
+            address_to_use = address_pool["Loopback"][as_n][router[0]]
             
-            "neighbor"
-            "!\naddress-family ipv4\n exit-address-family\n!\n"
+            # as_val["Loopback IP range"].split("/")[0]+str(i)
+            # while address_to_use in address_used[as_n]["Loopback"]:
+            #     i+=1 
+            #     address_to_use = as_val["Loopback IP range"].split("/")[0]+str(i)
+            #     print("coucou loopback")
+            address_used[as_n]["Loopback"].append(address_to_use)
+            ##
+            for inter in interfaces:
+                if "Loopback" in inter:
+                    loopback_name = inter
+            for router_to_compare in address_pool["Loopback"][as_n]:
+                if address_pool["Loopback"][as_n][router_to_compare] != address_to_use:
+                    neighbors_data += " neighbor " + address_pool["Loopback"][as_n][router_to_compare] + " remote-as " + as_n + "\n"
+                    neighbors_data += " neighbor " + address_pool["Loopback"][as_n][router_to_compare] + " update-source " + loopback_name + "\n"
+            if router[0] in list(data_json["eBGP"].keys()):
+                neighbors_data += " neighbor " + address_pool["Loopback"][list(data_json["eBGP"][router[0]].values())[0]][list(data_json["eBGP"][router[0]].keys())[0]] + " remote-as " + list(data_json["eBGP"][router[0]].values())[0] + "\n"
+                neighbors_data += " neighbor " + address_pool["Loopback"][list(data_json["eBGP"][router[0]].values())[0]][list(data_json["eBGP"][router[0]].keys())[0]] + " update-source " + loopback_name + "\n"
+            data[69] += neighbors_data
+            data[69] += " !\n address-family ipv4\n exit-address-family\n!\n"
 
-            "address-family ipv6"
-            "neighbor"
-            "exit-address-family"
+            # "address-family ipv6"
+            # "neighbor"
+            # "exit-address-family"
 
 
             for inter in interfaces:
 
-                if "Loopback" in inter:
-                    i = 1
-                    address_to_use = as_val["Loopback IP range"].split("/")[0]+str(i)
-                    while address_to_use in address_used[as_n]["Loopback"]:
-                        i+=1 
-                        address_to_use = as_val["Loopback IP range"].split("/")[0]+str(i)
-                    address_used[as_n]["Loopback"].append(address_to_use)
+                if "Loopback" in inter:                    
                     address = "ipv6 address "+address_to_use+"\n"
                 else:
                     i = 1

@@ -53,5 +53,9 @@
                 }
             }
         },
-    "BGP" : 1
+    "eBGP" : {
+        "Source" : {"Destination" : "Numéro d'AS"},
+        "R2" : {"R4" : "2"},
+        "R4" : {"R2" : "1"}
+    }
 }
