@@ -1,0 +1,37 @@
+Jan 15 08:55:29.539 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Jan 15 08:55:29.540 HYPERVISOR: Started on IP = localhost, TCP port = 16131.
+Jan 15 08:55:30.027 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 15 08:55:30.028 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips 
+Jan 15 08:55:30.028 GENERAL: working_dir=C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips
+Jan 15 08:55:30.028 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\2f849e81-d65e-4ae7-80ea-0f4e2eed7c9b 
+Jan 15 08:55:30.029 GENERAL: working_dir=C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\2f849e81-d65e-4ae7-80ea-0f4e2eed7c9b
+Jan 15 08:55:30.029 HYPERVISOR: exec_cmd: vm create R7 7 c7200 
+Jan 15 08:55:30.030 VM: VM R7 created.
+Jan 15 08:55:30.031 HYPERVISOR: exec_cmd: vm set_con_tcp_port R7 5006 
+Jan 15 08:55:30.031 HYPERVISOR: exec_cmd: c7200 get_mac_addr R7 
+Jan 15 08:55:30.031 HYPERVISOR: exec_cmd: vm get_status R7 
+Jan 15 08:55:30.031 HYPERVISOR: exec_cmd: vm slot_add_binding R7 0 0 C7200-IO-FE 
+Jan 15 08:55:30.032 HYPERVISOR: exec_cmd: vm set_disk0 R7 0 
+Jan 15 08:55:30.032 HYPERVISOR: exec_cmd: vm set_exec_area R7 64 
+Jan 15 08:55:30.032 HYPERVISOR: exec_cmd: vm get_status R7 
+Jan 15 08:55:30.032 HYPERVISOR: exec_cmd: vm set_idle_pc R7 0x61e05870 
+Jan 15 08:55:30.033 HYPERVISOR: exec_cmd: vm set_ios R7 C:/Users/ajneb/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 15 08:55:30.033 HYPERVISOR: exec_cmd: vm set_nvram R7 512 
+Jan 15 08:55:30.033 HYPERVISOR: exec_cmd: vm set_ram R7 512 
+Jan 15 08:55:30.034 HYPERVISOR: exec_cmd: vm get_status R7 
+Jan 15 08:55:30.034 HYPERVISOR: exec_cmd: vm slot_add_binding R7 1 0 PA-GE 
+Jan 15 08:55:30.034 HYPERVISOR: exec_cmd: vm get_status R7 
+Jan 15 08:55:30.034 HYPERVISOR: exec_cmd: vm slot_add_binding R7 2 0 PA-GE 
+Jan 15 08:55:30.034 HYPERVISOR: exec_cmd: vm get_status R7 
+Jan 15 08:55:30.034 HYPERVISOR: exec_cmd: vm slot_add_binding R7 3 0 PA-GE 
+Jan 15 08:55:30.035 HYPERVISOR: exec_cmd: vm set_con_tcp_port R7 5006 
+Jan 15 08:55:30.066 HYPERVISOR: exec_cmd: vm rename R7 R5 
+Jan 15 08:55:30.074 HYPERVISOR: exec_cmd: vm rename R5 R7 
+Jan 15 08:55:31.542 HYPERVISOR: exec_cmd: vm set_ios R7 C:/Users/ajneb/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 15 08:55:34.178 HYPERVISOR: exec_cmd: vm get_status R7 
+Jan 15 08:55:34.178 HYPERVISOR: exec_cmd: vm extract_config R7 
+Jan 15 08:55:34.179 HYPERVISOR: exec_cmd: vm delete R7 
+Jan 15 08:55:34.179 VM: VM R7 destroyed.
+Jan 15 08:55:34.180 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 15 08:55:34.640 HYPERVISOR: Stopped.
+Jan 15 08:55:34.640 GENERAL: reset done.
