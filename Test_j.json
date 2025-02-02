@@ -4,9 +4,6 @@
             "1" : 
             {
                 "Protocol" : "OSPF",
-                "special ip address" : {
-                    "R2" : {"GigabitEthernet1/0" : "200:100:100:100::1/64"}
-                },
                 "Loopback IP range" : "1000:100:100:100::/64",
                 "Router IP range" : "100:100:100:100::/64",
                 "Router":
@@ -54,8 +51,8 @@
             }
         },
     "eBGP" : {
-        "Source" : {"Destination" : "Numéro d'AS"},
-        "R2" : {"R4" : "2"},
-        "R4" : {"R2" : "1"}
+        "Source" : {"Destination" : ["Numéro d'AS", "IP Range"]},
+        "R2" : {"R4" : {"AS":2,"IP":"1.1.1.1.1::1/32"}},
+        "R4" : {"R2" : {"AS":1,"IP":"1.1.1.1.1::2/32"}}
     }
 }
