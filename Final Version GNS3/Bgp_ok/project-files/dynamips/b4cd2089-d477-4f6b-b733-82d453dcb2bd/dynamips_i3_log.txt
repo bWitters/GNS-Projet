@@ -1,0 +1,142 @@
+Jan 15 08:03:41.934 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Jan 15 08:03:41.935 HYPERVISOR: Started on IP = localhost, TCP port = 51111.
+Jan 15 08:03:42.447 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 15 08:03:42.448 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips 
+Jan 15 08:03:42.448 GENERAL: working_dir=C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips
+Jan 15 08:03:42.448 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\a46ea057-e53b-4df7-b20e-124c6981cf39 
+Jan 15 08:03:42.448 GENERAL: working_dir=C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\a46ea057-e53b-4df7-b20e-124c6981cf39
+Jan 15 08:03:42.449 HYPERVISOR: exec_cmd: vm create R3 3 c7200 
+Jan 15 08:03:42.450 VM: VM R3 created.
+Jan 15 08:03:42.450 HYPERVISOR: exec_cmd: vm set_con_tcp_port R3 5002 
+Jan 15 08:03:42.450 HYPERVISOR: exec_cmd: c7200 get_mac_addr R3 
+Jan 15 08:03:42.450 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:03:42.450 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 C7200-IO-FE 
+Jan 15 08:03:42.451 HYPERVISOR: exec_cmd: vm set_disk0 R3 0 
+Jan 15 08:03:42.451 HYPERVISOR: exec_cmd: vm set_exec_area R3 64 
+Jan 15 08:03:42.452 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:03:42.452 HYPERVISOR: exec_cmd: vm set_idle_pc R3 0x61d99154 
+Jan 15 08:03:42.452 HYPERVISOR: exec_cmd: vm set_ios R3 C:/Users/ajneb/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 15 08:03:42.453 HYPERVISOR: exec_cmd: c7200 set_mac_addr R3 ca03.5090.0000 
+Jan 15 08:03:42.453 HYPERVISOR: exec_cmd: vm set_nvram R3 512 
+Jan 15 08:03:42.454 HYPERVISOR: exec_cmd: vm set_ram R3 512 
+Jan 15 08:03:42.454 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:03:42.455 HYPERVISOR: exec_cmd: vm slot_add_binding R3 1 0 PA-GE 
+Jan 15 08:03:42.455 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:03:42.455 HYPERVISOR: exec_cmd: vm slot_add_binding R3 2 0 PA-GE 
+Jan 15 08:03:42.455 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:03:42.455 HYPERVISOR: exec_cmd: vm slot_add_binding R3 3 0 PA-GE 
+Jan 15 08:03:44.749 HYPERVISOR: exec_cmd: nio create_udp udp-d957d0bd-7ed2-459f-898c-28f617b5c00f 2010 127.0.0.1 2011 
+Jan 15 08:03:44.996 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 1 0 udp-d957d0bd-7ed2-459f-898c-28f617b5c00f 
+Jan 15 08:03:44.996 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:03:45.024 HYPERVISOR: exec_cmd: nio create_udp udp-37b8e154-4b1b-476e-809d-00bb72251662 2014 127.0.0.1 2015 
+Jan 15 08:03:45.026 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 2 0 udp-37b8e154-4b1b-476e-809d-00bb72251662 
+Jan 15 08:03:45.026 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:19:56.375 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 15 08:19:56.382 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 15 08:19:56.382 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:19:56.391 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Jan 15 08:19:56.392 HYPERVISOR: exec_cmd: vm start R3 
+Jan 15 08:20:26.740 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 15 08:35:58.886 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:35:58.886 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 15 08:35:59.042 VM: VM R3 shutdown.
+Jan 15 08:35:59.043 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 15 08:39:28.276 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 15 08:39:28.283 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 15 08:39:28.284 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:39:28.290 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Jan 15 08:39:28.290 HYPERVISOR: exec_cmd: vm start R3 
+Jan 15 08:40:12.546 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:40:12.547 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 15 08:40:12.629 VM: VM R3 shutdown.
+Jan 15 08:40:12.630 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 15 08:40:41.775 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 15 08:40:41.782 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 15 08:40:41.782 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:40:41.789 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Jan 15 08:40:41.789 HYPERVISOR: exec_cmd: vm start R3 
+Jan 15 08:46:36.512 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:46:36.512 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 15 08:46:36.589 VM: VM R3 shutdown.
+Jan 15 08:46:36.591 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 15 08:49:01.131 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 15 08:49:01.139 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 15 08:49:01.139 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:49:01.147 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Jan 15 08:49:01.147 HYPERVISOR: exec_cmd: vm start R3 
+Jan 15 08:55:26.744 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 08:55:26.744 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 15 08:55:26.828 VM: VM R3 shutdown.
+Jan 15 08:55:26.829 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 15 09:00:49.536 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 15 09:00:49.544 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 15 09:00:49.544 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:00:49.554 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Jan 15 09:00:49.555 HYPERVISOR: exec_cmd: vm start R3 
+Jan 15 09:02:43.708 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:02:43.708 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 15 09:02:43.808 VM: VM R3 shutdown.
+Jan 15 09:02:43.809 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 15 09:04:53.976 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 15 09:04:53.983 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 15 09:04:53.984 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:04:53.992 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Jan 15 09:04:53.992 HYPERVISOR: exec_cmd: vm start R3 
+Jan 15 09:05:39.882 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:05:39.883 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 15 09:05:40.039 VM: VM R3 shutdown.
+Jan 15 09:05:40.040 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 15 09:06:16.757 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 15 09:06:16.765 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 15 09:06:16.765 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:06:16.773 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Jan 15 09:06:16.773 HYPERVISOR: exec_cmd: vm start R3 
+Jan 15 09:08:29.299 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:08:29.300 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 15 09:08:29.459 VM: VM R3 shutdown.
+Jan 15 09:08:29.460 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 15 09:09:25.941 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 15 09:09:25.949 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 15 09:09:25.949 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:09:25.957 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Jan 15 09:09:25.957 HYPERVISOR: exec_cmd: vm start R3 
+Jan 15 09:14:58.200 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:14:58.201 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 15 09:14:58.343 VM: VM R3 shutdown.
+Jan 15 09:14:58.344 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 15 09:16:16.910 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 15 09:16:16.910 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 15 09:16:16.911 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:16:16.918 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Jan 15 09:16:16.918 HYPERVISOR: exec_cmd: vm start R3 
+Jan 15 09:18:20.233 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:18:20.234 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 15 09:18:20.381 VM: VM R3 shutdown.
+Jan 15 09:18:20.382 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 15 09:18:57.772 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 15 09:18:57.779 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 15 09:18:57.780 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:18:57.787 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Jan 15 09:18:57.787 HYPERVISOR: exec_cmd: vm start R3 
+Jan 15 09:24:11.906 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:24:11.906 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 15 09:24:11.993 VM: VM R3 shutdown.
+Jan 15 09:24:11.995 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 15 09:24:34.262 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 15 09:24:34.269 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 15 09:24:34.269 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:24:34.276 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Jan 15 09:24:34.276 HYPERVISOR: exec_cmd: vm start R3 
+Jan 15 09:32:56.403 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:32:56.403 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 15 09:32:56.557 VM: VM R3 shutdown.
+Jan 15 09:32:56.558 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 15 09:34:26.648 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 15 09:34:26.657 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ajneb\GNS3\projects\Initial Configuration\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 15 09:34:26.657 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:34:26.670 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Jan 15 09:34:26.670 HYPERVISOR: exec_cmd: vm start R3 
+Jan 15 09:37:36.084 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 15 09:37:36.084 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 15 09:37:36.242 VM: VM R3 shutdown.
+Jan 15 09:37:36.243 HYPERVISOR: exec_cmd: vm extract_config R3 
