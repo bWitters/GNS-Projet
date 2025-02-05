@@ -28,7 +28,6 @@
             "2" :
             {
                 "Protocol" : "RIP",
-                "special ip address" : 0,
                 "Loopback IP range" : "2000:100:100:100::/64",
                 "Router IP range" : "200:100:100:100::/80",
                 "Router":
