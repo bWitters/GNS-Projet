@@ -5,23 +5,23 @@
             {
                 "Protocol" : "OSPF",
                 "Loopback IP range" : "1000:100:100:100::/64",
-                "Router IP range" : "100:100:100:100::/64",
+                "Router IP range" : "100:100:100:100::/80",
                 "Router":
                 {
                     "R1": {
                         "Loopback0" : {"area" : 0},
-                        "GigabitEthernet1/0" : {"connect" : {"R2" : 4}, "area" : 0}
+                        "GigabitEthernet1/0" : {"connect" : {"R3" : 4}, "area" : 0}
 
                     },
                     "R2":{
                         "Loopback0" : {"area" : 0},
-                        "GigabitEthernet1/0" : {"connect" : {"R1" : 1}, "area" : 0},
-                        "GigabitEthernet2/0" : {"connect" : {"R3" : 1}, "area" : 0},
-                        "GigabitEthernet3/0" : {"connect" : {"R4" : 1}, "area" : 0, "eBGP" : 1}
+                        "GigabitEthernet1/0" : {"connect" : {"R3" : 1}, "area" : 0},
+                        "GigabitEthernet2/0" : {"connect" : {"R4" : 1}, "area" : 0, "eBGP" : 1}
                     },
                     "R3":{
                         "Loopback0" : {"area" : 0},
-                        "GigabitEthernet1/0" : {"connect" : {"R2" : 1}, "area" : 0}
+                        "GigabitEthernet1/0" : {"connect" : {"R1" : 1}, "area" : 0},
+                        "GigabitEthernet2/0" : {"connect" : {"R2" : 1}, "area" : 0}
                     }
                 }
             },
@@ -30,7 +30,7 @@
                 "Protocol" : "RIP",
                 "special ip address" : 0,
                 "Loopback IP range" : "2000:100:100:100::/64",
-                "Router IP range" : "200:100:100:100::/64",
+                "Router IP range" : "200:100:100:100::/80",
                 "Router":
                 {
                     "R4": {
@@ -45,14 +45,14 @@
                     },
                     "R6":{
                         "Loopback0" : {"area" : 0},
-                        "GigabitEthernet3/0" : {"connect" : {"R5" : 1}, "area" : 0}
+                        "GigabitEthernet1/0" : {"connect" : {"R5" : 1}, "area" : 0}
                     }
                 }
             }
         },
     "eBGP" : {
-        "Source" : {"Destination" : ["Numéro d'AS", "IP Range"]},
-        "R2" : {"R4" : {"AS":2,"IP":"1.1.1.1.1::1/32"}},
-        "R4" : {"R2" : {"AS":1,"IP":"1.1.1.1.1::2/32"}}
+        "Source" : {"Destination" : {"Numéro d'AS" : "", "IP" : ""}},
+        "R2" : {"Ext_router" : {"R4" : {"AS":2,"IP":"2001:db8::1/32"}},"IP":"2001:db8::2/32"},
+        "R4" : {"Ext_router" : {"R2" : {"AS":1,"IP":"2001:db8::2/32"}},"IP":"2001:db8::1/32"}
     }
 }
