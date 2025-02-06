@@ -1,0 +1,76 @@
+Feb 05 13:41:46.768 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Feb 05 13:41:46.768 HYPERVISOR: Started on IP = localhost, TCP port = 59105.
+Feb 05 13:41:47.275 HYPERVISOR: exec_cmd: hypervisor version 
+Feb 05 13:41:47.275 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips 
+Feb 05 13:41:47.275 GENERAL: working_dir=C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips
+Feb 05 13:41:47.276 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips\1e741177-17fd-44f0-87de-5ff78320a377 
+Feb 05 13:41:47.277 GENERAL: working_dir=C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips\1e741177-17fd-44f0-87de-5ff78320a377
+Feb 05 13:41:47.277 HYPERVISOR: exec_cmd: vm create R2 2 c7200 
+Feb 05 13:41:47.278 VM: VM R2 created.
+Feb 05 13:41:47.278 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5001 
+Feb 05 13:41:47.279 HYPERVISOR: exec_cmd: c7200 get_mac_addr R2 
+Feb 05 13:41:47.279 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 05 13:41:47.279 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-FE 
+Feb 05 13:41:47.279 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Feb 05 13:41:47.280 HYPERVISOR: exec_cmd: vm set_exec_area R2 64 
+Feb 05 13:41:47.280 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 05 13:41:47.280 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x61e05870 
+Feb 05 13:41:47.281 HYPERVISOR: exec_cmd: vm set_ios R2 C:/Users/ajneb/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Feb 05 13:41:47.281 HYPERVISOR: exec_cmd: c7200 set_mac_addr R2 ca02.1e94.0000 
+Feb 05 13:41:47.281 HYPERVISOR: exec_cmd: vm set_nvram R2 512 
+Feb 05 13:41:47.282 HYPERVISOR: exec_cmd: vm set_ram R2 512 
+Feb 05 13:41:47.282 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 05 13:41:47.282 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 PA-GE 
+Feb 05 13:41:47.282 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 05 13:41:47.282 HYPERVISOR: exec_cmd: vm slot_add_binding R2 2 0 PA-GE 
+Feb 05 13:41:47.283 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 05 13:41:47.283 HYPERVISOR: exec_cmd: vm slot_add_binding R2 3 0 PA-GE 
+Feb 05 13:41:49.887 HYPERVISOR: exec_cmd: nio create_udp udp-c4b12fbe-f436-4950-9e35-dcbefcfffe84 2004 127.0.0.1 2005 
+Feb 05 13:41:50.151 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 1 0 udp-c4b12fbe-f436-4950-9e35-dcbefcfffe84 
+Feb 05 13:41:50.152 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 05 13:41:50.185 HYPERVISOR: exec_cmd: nio create_udp udp-cf5d4f91-6a93-4355-8545-1dc2a4824059 2008 127.0.0.1 2009 
+Feb 05 13:41:50.188 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 2 0 udp-cf5d4f91-6a93-4355-8545-1dc2a4824059 
+Feb 05 13:41:50.188 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 05 13:48:45.220 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Feb 05 13:48:45.221 VM: VM Ghost created.
+Feb 05 13:48:45.222 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/ajneb/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Feb 05 13:48:45.222 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Feb 05 13:48:45.222 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Feb 05 13:48:45.223 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Feb 05 13:48:45.223 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Feb 05 13:48:45.232 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Feb 05 13:48:45.232 HYPERVISOR: exec_cmd: vm start Ghost 
+Feb 05 13:48:45.549 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Feb 05 13:48:45.550 HYPERVISOR: exec_cmd: vm stop Ghost 
+Feb 05 13:48:45.682 VM: VM Ghost shutdown.
+Feb 05 13:48:45.683 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Feb 05 13:48:45.684 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Feb 05 13:48:45.684 VM: VM Ghost destroyed.
+Feb 05 13:48:45.692 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Feb 05 13:48:45.692 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Feb 05 13:48:45.693 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 05 13:48:45.699 HYPERVISOR: exec_cmd: vm set_config R2 configs\i2_startup-config.cfg 
+Feb 05 13:48:45.700 HYPERVISOR: exec_cmd: vm start R2 
+Feb 05 13:49:16.035 HYPERVISOR: exec_cmd: vm extract_config R2 
+Feb 05 13:49:43.766 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 05 13:49:43.767 HYPERVISOR: exec_cmd: vm stop R2 
+Feb 05 13:49:43.884 VM: VM R2 shutdown.
+Feb 05 13:49:43.886 HYPERVISOR: exec_cmd: vm extract_config R2 
+Feb 05 13:50:40.085 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Feb 05 13:50:40.092 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Feb 05 13:50:40.093 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 05 13:50:40.100 HYPERVISOR: exec_cmd: vm set_config R2 configs\i2_startup-config.cfg 
+Feb 05 13:50:40.100 HYPERVISOR: exec_cmd: vm start R2 
+Feb 05 14:45:25.489 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 05 14:45:25.490 HYPERVISOR: exec_cmd: vm stop R2 
+Feb 05 14:45:25.607 VM: VM R2 shutdown.
+Feb 05 14:45:25.608 HYPERVISOR: exec_cmd: vm extract_config R2 
+Feb 05 14:46:16.922 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Feb 05 14:46:16.931 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Feb 05 14:46:16.932 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 05 14:46:16.943 HYPERVISOR: exec_cmd: vm set_config R2 configs\i2_startup-config.cfg 
+Feb 05 14:46:16.944 HYPERVISOR: exec_cmd: vm start R2 
+Feb 05 15:00:52.829 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 05 15:00:52.830 HYPERVISOR: exec_cmd: vm stop R2 
+Feb 05 15:00:52.932 VM: VM R2 shutdown.
+Feb 05 15:00:52.933 HYPERVISOR: exec_cmd: vm extract_config R2 

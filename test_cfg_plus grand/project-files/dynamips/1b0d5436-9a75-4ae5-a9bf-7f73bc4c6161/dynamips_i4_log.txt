@@ -1,0 +1,61 @@
+Feb 05 13:41:47.891 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Feb 05 13:41:47.891 HYPERVISOR: Started on IP = localhost, TCP port = 59117.
+Feb 05 13:41:48.394 HYPERVISOR: exec_cmd: hypervisor version 
+Feb 05 13:41:48.394 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips 
+Feb 05 13:41:48.394 GENERAL: working_dir=C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips
+Feb 05 13:41:48.394 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips\2669391d-3813-4bed-8df4-6b97c24ea3cf 
+Feb 05 13:41:48.396 GENERAL: working_dir=C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips\2669391d-3813-4bed-8df4-6b97c24ea3cf
+Feb 05 13:41:48.396 HYPERVISOR: exec_cmd: vm create R4 4 c7200 
+Feb 05 13:41:48.397 VM: VM R4 created.
+Feb 05 13:41:48.398 HYPERVISOR: exec_cmd: vm set_con_tcp_port R4 5003 
+Feb 05 13:41:48.398 HYPERVISOR: exec_cmd: c7200 get_mac_addr R4 
+Feb 05 13:41:48.398 HYPERVISOR: exec_cmd: vm get_status R4 
+Feb 05 13:41:48.399 HYPERVISOR: exec_cmd: vm slot_add_binding R4 0 0 C7200-IO-FE 
+Feb 05 13:41:48.399 HYPERVISOR: exec_cmd: vm set_disk0 R4 0 
+Feb 05 13:41:48.399 HYPERVISOR: exec_cmd: vm set_exec_area R4 64 
+Feb 05 13:41:48.400 HYPERVISOR: exec_cmd: vm get_status R4 
+Feb 05 13:41:48.400 HYPERVISOR: exec_cmd: vm set_idle_pc R4 0x61e05870 
+Feb 05 13:41:48.400 HYPERVISOR: exec_cmd: vm set_ios R4 C:/Users/ajneb/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Feb 05 13:41:48.401 HYPERVISOR: exec_cmd: c7200 set_mac_addr R4 ca04.5ef8.0000 
+Feb 05 13:41:48.401 HYPERVISOR: exec_cmd: vm set_nvram R4 512 
+Feb 05 13:41:48.401 HYPERVISOR: exec_cmd: vm set_ram R4 512 
+Feb 05 13:41:48.401 HYPERVISOR: exec_cmd: vm get_status R4 
+Feb 05 13:41:48.402 HYPERVISOR: exec_cmd: vm slot_add_binding R4 1 0 PA-GE 
+Feb 05 13:41:48.402 HYPERVISOR: exec_cmd: vm get_status R4 
+Feb 05 13:41:48.402 HYPERVISOR: exec_cmd: vm slot_add_binding R4 2 0 PA-GE 
+Feb 05 13:41:48.402 HYPERVISOR: exec_cmd: vm get_status R4 
+Feb 05 13:41:48.402 HYPERVISOR: exec_cmd: vm slot_add_binding R4 3 0 PA-GE 
+Feb 05 13:41:50.489 HYPERVISOR: exec_cmd: nio create_udp udp-0aaef4ab-75b7-4ec3-ae4c-e660b402877f 2016 127.0.0.1 2017 
+Feb 05 13:41:50.726 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 1 0 udp-0aaef4ab-75b7-4ec3-ae4c-e660b402877f 
+Feb 05 13:41:50.727 HYPERVISOR: exec_cmd: vm get_status R4 
+Feb 05 13:41:50.754 HYPERVISOR: exec_cmd: nio create_udp udp-291a66e2-c1ce-4ad7-91ca-264941bb294c 2020 127.0.0.1 2021 
+Feb 05 13:41:50.758 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 2 0 udp-291a66e2-c1ce-4ad7-91ca-264941bb294c 
+Feb 05 13:41:50.758 HYPERVISOR: exec_cmd: vm get_status R4 
+Feb 05 13:48:46.028 HYPERVISOR: exec_cmd: vm set_ghost_status R4 2 
+Feb 05 13:48:46.028 HYPERVISOR: exec_cmd: vm set_ghost_file R4 C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Feb 05 13:48:46.029 HYPERVISOR: exec_cmd: vm get_status R4 
+Feb 05 13:48:46.036 HYPERVISOR: exec_cmd: vm set_config R4 configs\i4_startup-config.cfg 
+Feb 05 13:48:46.038 HYPERVISOR: exec_cmd: vm start R4 
+Feb 05 13:49:16.316 HYPERVISOR: exec_cmd: vm extract_config R4 
+Feb 05 13:49:43.869 HYPERVISOR: exec_cmd: vm get_status R4 
+Feb 05 13:49:43.870 HYPERVISOR: exec_cmd: vm stop R4 
+Feb 05 13:49:43.937 VM: VM R4 shutdown.
+Feb 05 13:49:43.938 HYPERVISOR: exec_cmd: vm extract_config R4 
+Feb 05 13:50:40.367 HYPERVISOR: exec_cmd: vm set_ghost_status R4 2 
+Feb 05 13:50:40.368 HYPERVISOR: exec_cmd: vm set_ghost_file R4 C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Feb 05 13:50:40.368 HYPERVISOR: exec_cmd: vm get_status R4 
+Feb 05 13:50:40.376 HYPERVISOR: exec_cmd: vm set_config R4 configs\i4_startup-config.cfg 
+Feb 05 13:50:40.376 HYPERVISOR: exec_cmd: vm start R4 
+Feb 05 14:45:25.584 HYPERVISOR: exec_cmd: vm get_status R4 
+Feb 05 14:45:25.584 HYPERVISOR: exec_cmd: vm stop R4 
+Feb 05 14:45:25.678 VM: VM R4 shutdown.
+Feb 05 14:45:25.680 HYPERVISOR: exec_cmd: vm extract_config R4 
+Feb 05 14:46:17.242 HYPERVISOR: exec_cmd: vm set_ghost_status R4 2 
+Feb 05 14:46:17.242 HYPERVISOR: exec_cmd: vm set_ghost_file R4 C:\Users\ajneb\GNS3\projects\test_cfg\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Feb 05 14:46:17.243 HYPERVISOR: exec_cmd: vm get_status R4 
+Feb 05 14:46:17.251 HYPERVISOR: exec_cmd: vm set_config R4 configs\i4_startup-config.cfg 
+Feb 05 14:46:17.253 HYPERVISOR: exec_cmd: vm start R4 
+Feb 05 15:00:52.892 HYPERVISOR: exec_cmd: vm get_status R4 
+Feb 05 15:00:52.892 HYPERVISOR: exec_cmd: vm stop R4 
+Feb 05 15:00:53.030 VM: VM R4 shutdown.
+Feb 05 15:00:53.031 HYPERVISOR: exec_cmd: vm extract_config R4 
